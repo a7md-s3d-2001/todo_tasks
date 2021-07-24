@@ -128,12 +128,14 @@ class HomePage extends StatelessWidget {
                       )
                       .closed
                       .then((value) {
+                    titleTaskController.text = '';
+                    timeTaskController.text = '';
+                    dateTaskController.text = '';
                     cubit.changeBottomSheetBar(
                       bottomSheet: false,
                     );
                   });
                 }
-
                 cubit.changeBottomSheetBar(
                   bottomSheet: true,
                 );
